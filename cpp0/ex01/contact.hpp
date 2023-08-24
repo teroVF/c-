@@ -4,62 +4,95 @@
 # include <iostream>
 # include <string>
 
-using namespace std;
-
 class Contact
 {
     private:
-        string first_name;
-        string last_name;
-        string nickname;
-        string phone_number;
+        std::string first_name;
+        std::string last_name;
+        std::string nickname;
+        std::string phone_number;
+        std::string darkest_secret;
     public:
-        void contact(string first_name, string last_name, string nickname, string phone_number);
-        void set_first_name(string first_name);
-        void set_last_name(string last_name);
-        void set_nickname(string nickname);
-        void set_phone_number(string phone_number);
-
+        void set_first_name(Contact *contact);
+        void set_last_name(Contact *contact);
+        void set_nickname(Contact *contact);
+        void set_phone_number(Contact *contact);
+        void set_darkest_secret(Contact *contact);
+        std::string get_first_name() {return (this->first_name);}
+        std::string get_last_name() {return (this->last_name);}
+        std::string get_nickname() {return (this->nickname);}
+        std::string get_phone_number() {return (this->phone_number);}
+        std::string get_darkest_secret() {return (this->darkest_secret);}
 };
 
-contact::contact(string first_name, string last_name, string nickname, string phone_number)
+void Contact::set_phone_number(Contact *contact)
 {
-    this->first_name = first_name;
-    this->last_name = last_name;
-    this->nickname = nickname;
-    this->phone_number = phone_number;
+    std::string number;
+    std::cout << "Number: ";
+    std::getline(std::cin, number);
+    if (number.length() == 0)
+    {
+        std::cout << "empty argument" << std::endl;
+        set_phone_number(contact);
+    }
+    else
+        this->phone_number = number;
 }
 
-void contact::set_first_name(string first_name)
+void Contact::set_first_name(Contact *contact)
 {
-    this->first_name = first_name;
-}
-void contact::set_last_name(string last_name)
-{
-    this->last_name = last_name;
-}
-void contact::set_nickname(string nickname)
-{
-    this->nickname = nickname;
-}
-void contact::set_phone_number(string phone_number)
-{
-    int i = 0;
-    while (i < phone_number.length())
+    std::string first_name;
+    std::cout << "First name: ";
+    std::getline(std::cin, first_name);
+    if (first_name.length() == 0)
     {
-        if (isdigit(phone_number[i]) == false)
-        {
-            cout << "Invalid phone number" << endl;
-            return ;
-        }
-        i++;
+        std::cout << "empty argument" << std::endl;
+        set_first_name(contact);
     }
-    if (phone_number.length() < 9)
-    {
-        cout << "Invalid phone number" << endl;
-        return ;
-    }
-    this->phone_number = phone_number;
+    else
+        this->first_name = first_name;
+}
 
+void Contact::set_last_name(Contact *contact)
+{
+    std::string last_name;
+    std::cout << "Last name: ";
+    std::getline(std::cin, last_name);
+    if (last_name.length() == 0)
+    {
+        std::cout << "empty argument" << std::endl;
+        set_last_name(contact);
+    }
+    else
+        this->last_name = last_name;
 }
+
+void Contact::set_nickname(Contact *contact)
+{
+    std::string nickname;
+    std::cout << "Nickname: ";
+    std::getline(std::cin, nickname);
+    if (nickname.length() == 0)
+    {
+        std::cout << "empty argument" << std::endl;
+        set_nickname(contact);
+    }
+    else
+        this->nickname = nickname;
+}
+
+void Contact::set_darkest_secret(Contact *contact)
+{
+    std::string secret;
+    std::cout << "Tell me your darkest secret: ";
+    std::getline(std::cin, secret);
+    if (secret.length() == 0)
+    {
+        std::cout << "empty argument" << std::endl;
+        set_darkest_secret(contact);
+    }
+    else
+        this->darkest_secret = secret;
+}
+
 #endif

@@ -1,14 +1,13 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -fr
-NAME = megaphone.out
-SRCS = megaphone.cpp
-OBJS = $(SRCS:.cpp=.o)
+NAME = phonebook
+SRCS = main.cpp
 
 all:	$(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME):
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 clean: 
 	$(RM) $(OBJS)

@@ -1,20 +1,35 @@
-#include "phonebook.hpp"
-#include "contact.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/24 02:26:55 by anvieira          #+#    #+#             */
+/*   Updated: 2023/08/24 20:29:10 by anvieira         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-using namespace std;
+#include "phonebook.hpp"
 
 int main(void)
 {
-    string command = "";
+    Phonebook phonebook;
+    std::string command = "";
+    phonebook.init_index();
     while(command != "EXIT")
     {
-        cout << "Enter a command: ";
-        cin >> command;
+        std::cout << "Enter a command: ";
+        std::getline(std::cin, command);
         if (command == "ADD")
-            ADD();
+            phonebook.add_contact();
         else if (command == "SEARCH")
-            SEARCH();
-        else
-            cout << "Invalid command" << endl;
+            phonebook.search_contact();
+        else if (command != "EXIT")
+        {
+            std::cout << "Invalid command: " << command << std::endl;
+            std::cout << "Valid commands: ADD, SEARCH, EXIT" << std::endl;
+        }
     }
+    return (0);
 }

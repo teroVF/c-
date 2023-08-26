@@ -1,20 +1,33 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 RM = rm -fr
 NAME = phonebook
-SRCS = main.cpp
+SRCS = Contact.cpp main.cpp Phonebook.cpp
+OBJS = $(SRCS:.cpp=.o)
+INC = Contact.hpp Phonebook.hpp
 
 all:	$(NAME)
 
-$(NAME):
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	@echo "Compiling..."
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "Done!"
+
+
+$(OBJS): $(SRCS)
+	@$(CC) $(CFLAGS) -c $(SRCS)
 
 clean: 
-	$(RM) $(OBJS)
+	@echo "Cleaning object files..."
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@echo "Cleaning binary file..."
+	@$(RM) $(NAME)
 
-re: fclean all
+re:
+	@echo "Rebuilding..."
+	@$(MAKE) -s fclean
+	@$(MAKE) -s all
 
 .PHONY: all clean fclean re

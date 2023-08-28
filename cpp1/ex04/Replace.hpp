@@ -6,15 +6,15 @@
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:33:41 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 15:40:28 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:15:54 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef REPLACE_H
 # define REPLACE_H
-#include <string>
-#include <iostream>
-#include <fstream>
+# include <string>
+# include <iostream>
+# include <fstream>
 
 class Replace
 {

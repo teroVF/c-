@@ -1,8 +1,8 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 RM = rm -fr
-NAME = main
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+NAME = replace
+SRCS = main.cpp replace.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all:	$(NAME)

@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 14:37:45 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 16:12:07 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/29 23:48:24 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.hpp"
 
 Replace::Replace( string filename, string s1, string s2 )
+: filename(filename), s1(s1), s2(s2)
 {
-    this->filename = filename;
-    this->s1 = s1;
-    this->s2 = s2;
     get_content();
 }
 
-Replace::~Replace()
-{
-}
+Replace::~Replace() {}
 
 bool Replace::get_content( void )
 {

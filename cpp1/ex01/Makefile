@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 RM = rm -fr
 NAME = brainz
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
@@ -24,6 +24,7 @@ clean:
 fclean: clean
 	@echo "Cleaning binary file..."
 	@$(RM) $(NAME)
+	@echo "All clean!"
 
 re:
 	@echo "Rebuilding..."

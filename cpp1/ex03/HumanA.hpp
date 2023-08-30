@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 21:01:09 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 01:51:51 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/29 21:11:46 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ private:
     std::string name;
     Weapon &weapon;
 public:
-    HumanA(std::string n, Weapon &w) : name(n), weapon(w) {}
-    ~HumanA() {};
+    HumanA(std::string n, Weapon &w);
+    ~HumanA();
     void attack( void );
 };
 

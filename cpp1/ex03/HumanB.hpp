@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 00:45:01 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 01:51:21 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/29 21:09:21 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
     Weapon      *weapon;
 public:
     HumanB(std::string name);
-    ~HumanB() {};
+    ~HumanB();
     void attack( void );
     void setWeapon( Weapon &weapon );
 };

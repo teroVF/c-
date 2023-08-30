@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 00:44:50 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 01:55:59 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/29 21:08:20 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 #include <string>
 #include "cstdio"
 
-HumanB::HumanB(std::string name)
-{
-    this->name = name;
-    this->weapon = NULL;
-}
+HumanB::HumanB(std::string name) : name(name) { this->weapon = NULL; }
+
+HumanB::~HumanB() {};
 
 void HumanB::attack( void )
 {

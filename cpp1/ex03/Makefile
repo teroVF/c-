@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 RM = rm -fr
 NAME = main
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp

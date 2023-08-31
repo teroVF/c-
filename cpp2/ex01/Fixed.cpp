@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/31 01:34:41 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/08/31 01:45:50 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ Fixed &Fixed::operator=(const Fixed &f)
     return *this;
 }
 
-int Fixed::getRawBits(void) const
+int Fixed::getRawBits(void) const;
 {
     std::cout << "getRawBits member function called" << std::endl;
+    this->_value = 4;
     return (this->_value);
 }
 

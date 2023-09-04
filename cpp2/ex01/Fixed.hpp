@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/31 01:53:17 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/01 15:57:58 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ private:
 public:
     Fixed(int const number);
     Fixed(float const number);
-    ~Fixed();
     Fixed(const Fixed &f);
     Fixed& operator=(const Fixed& f);
     int getRawBits( void ) const;

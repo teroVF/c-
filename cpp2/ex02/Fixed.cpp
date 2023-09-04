@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/04 23:48:38 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/04 23:49:35 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,52 @@ Fixed &Fixed::operator=(const Fixed &f)
     return *this;
 }
 
+Fixed Fixed::operator+(const Fixed &f) const
+{
+    return Fixed(this->toFloat() + f.toFloat());
+}
+
+Fixed Fixed::operator-(const Fixed &f) const
+{
+    return Fixed(this->toFloat() - f.toFloat());
+}
+
+Fixed Fixed::operator*(const Fixed &f) const
+{
+    return Fixed(this->toFloat() * f.toFloat());
+}
+
+Fixed Fixed::operator/(const Fixed &f) const
+{
+    return Fixed(this->toFloat() / f.toFloat());
+}
+
+Fixed &Fixed::operator++(void)
+{
+    this->_value++;
+    return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed tmp(*this);
+    operator++();
+    return tmp;
+}
+
+Fixed &Fixed::operator--(void)
+{
+    this->_value--;
+    return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp(*this);
+    operator--();
+    return tmp;
+}
+
 int Fixed::getRawBits(void) const
 {
     return (this->_value);
@@ -73,4 +119,5 @@ std::ostream &operator<<(std::ostream &os, const Fixed &number)
     os << number.toFloat();
     return os;
 }
+
 

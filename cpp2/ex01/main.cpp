@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 01:39:00 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/03 04:06:42 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/04 23:04:30 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main( void )
 {
     Fixed a;
     Fixed const b( 10 );
-    Fixed const c( 42.42f );45
+    Fixed const c( 42.42f );
     Fixed const d( b );
     a = Fixed( 1234.4321f );
     

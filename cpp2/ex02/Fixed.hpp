@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/04 23:04:51 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/04 23:18:28 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,14 @@ public:
     Fixed(const Fixed &f);
     ~Fixed();
     Fixed& operator=(const Fixed& f);
+    Fixed operator+(const Fixed& f) const;
+    Fixed operator-(const Fixed& f) const;
+    Fixed operator*(const Fixed& f) const;
+    Fixed operator/(const Fixed& f) const;
+    Fixed& operator++(void);
+    Fixed operator++(int);
+    Fixed& operator--(void);
+    Fixed operator--(int);
     int getRawBits( void ) const;
     void setRawBits( int const raw );
     float toFloat( void ) const;

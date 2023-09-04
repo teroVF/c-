@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/01 16:02:28 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/04 12:16:12 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,8 @@ Fixed::Fixed(int const number)
 
 Fixed::Fixed(float const number)
 {
-    this->_value = number;
+    this->_value = number
     std::cout << "Default constructor called" << std::endl;
-}
-
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &f)
@@ -54,12 +49,18 @@ void Fixed::setRawBits(int const raw)
     this->_value = raw;
 }
 
-int toInt( void ) const
+int Fixed::toInt( void ) const
 {
     return (this->_value);
 }
 
-float toFloat( void ) const
+float Fixed::toFloat( void ) const
 {
     return (this->_value);
+}
+
+std::ostream &operator<<(std::ostream &os, const Fixed &number)
+{
+    os << number.toFloat();
+    return os;
 }

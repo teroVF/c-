@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/04 23:18:28 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/06 01:46:39 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 {
 private:
     int                _value; //integer to store fixed point number
-    static const int   _bits =8; //to store the number of fractional bits
+    static const int   _bits = 8; //to store the number of fractional bits
 public:
     Fixed(int const number);
     Fixed(float const number);
@@ -41,6 +41,10 @@ public:
     void setRawBits( int const raw );
     float toFloat( void ) const;
     int toInt( void ) const;
+    static Fixed& min(Fixed& f1, Fixed& f2);
+    static const Fixed& min(const Fixed& f1, const Fixed& f2);
+    static Fixed& max(Fixed& f1, Fixed& f2);
+    static const Fixed& max(const Fixed& f1, const Fixed& f2);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f);

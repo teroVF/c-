@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/04 23:49:35 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/06 01:50:38 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,27 @@
 Fixed::Fixed(int const number)
 {
     this->_value = number << this->_bits;
-    std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(float const number)
 {
     this->_value = (int)roundf(number * (1 << this->_bits));
-    std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed()
 {
     this->_value = 0;
-    std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called" << std::endl;
-}
+Fixed::~Fixed() {}
 
 Fixed::Fixed(const Fixed &f)
 {
-    std::cout << "Copy Constructor was called" << std::endl;
     *this = f;
 }
 
 Fixed &Fixed::operator=(const Fixed &f)
 {
-    std::cout << "Copy assignment operator called " << std::endl;
     this->_value = f.getRawBits();
     return *this;
 }
@@ -118,6 +110,34 @@ std::ostream &operator<<(std::ostream &os, const Fixed &number)
 {
     os << number.toFloat();
     return os;
+}
+
+Fixed &Fixed::min(Fixed &f1, Fixed &f2)
+{
+    if (f1.getRawBits() < f2.getRawBits())
+        return f1;
+    return f2;
+}
+
+const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2)
+{
+    if (f1.getRawBits() < f2.getRawBits())
+        return f1;
+    return f2;
+}
+
+Fixed &Fixed::max(Fixed &f1, Fixed &f2)
+{
+    if (f1.getRawBits() > f2.getRawBits())
+        return f1;
+    return f2;
+}
+
+const Fixed &Fixed::max(const Fixed &f1, const Fixed &f2)
+{
+    if (f1.getRawBits() > f2.getRawBits())
+        return f1;
+    return f2;
 }
 
 

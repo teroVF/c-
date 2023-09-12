@@ -1,10 +1,10 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 RM = rm -fr
-NAME = brainz
-SRCS = main.cpp Zombie.cpp
+NAME = clap_trap
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
-INC = Zombie.hpp
+INC = ClapTrap.hpp ScavTrap.hpp
 
 all:	$(NAME)
 

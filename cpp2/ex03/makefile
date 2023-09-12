@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 RM = rm -fr
-NAME = isBsq
+NAME = bsq
 SRCS = main.cpp Fixed.cpp bsp.cpp Point.cpp
 OBJS = $(SRCS:.cpp=.o)
 

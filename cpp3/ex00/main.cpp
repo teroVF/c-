@@ -5,31 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 02:26:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 17:13:10 by anvieira         ###   ########.fr       */
+/*   Created: 2023/09/07 16:59:10 by anvieira          #+#    #+#             */
+/*   Updated: 2023/09/10 00:25:53 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "ClapTrap.hpp"
 
 int main(void)
 {
-    Phonebook phonebook;
-    std::string command = "";
-    phonebook.init_index();
-    while(command != "EXIT")
-    {
-        std::cout << "Enter a command: ";
-        std::getline(std::cin, command);
-        if (command == "ADD")
-            phonebook.add_contact();
-        else if (command == "SEARCH")
-            phonebook.search_contact();
-        else if (command != "EXIT")
-        {
-            std::cout << "Invalid command: " << command << std::endl;
-            std::cout << "Valid commands: ADD, SEARCH, EXIT" << std::endl;
-        }
-    }
+    /* TESTING */
+    ClapTrap clap1 ("Gerson");
+    for (int i = 0; i != 10; i++)
+        clap1.attack("Quim");
+    clap1.attack("Quim");
+    clap1.takeDamage(5);
+    clap1.beRepaired(5);
+    clap1.takeDamage(5);
+    clap1.takeDamage(5);
+    clap1.attack("Quim");
     return (0);
 }

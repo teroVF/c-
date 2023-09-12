@@ -5,31 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 02:26:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 17:13:10 by anvieira         ###   ########.fr       */
+/*   Created: 2023/09/07 16:59:10 by anvieira          #+#    #+#             */
+/*   Updated: 2023/09/10 16:56:55 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-    Phonebook phonebook;
-    std::string command = "";
-    phonebook.init_index();
-    while(command != "EXIT")
-    {
-        std::cout << "Enter a command: ";
-        std::getline(std::cin, command);
-        if (command == "ADD")
-            phonebook.add_contact();
-        else if (command == "SEARCH")
-            phonebook.search_contact();
-        else if (command != "EXIT")
-        {
-            std::cout << "Invalid command: " << command << std::endl;
-            std::cout << "Valid commands: ADD, SEARCH, EXIT" << std::endl;
-        }
-    }
+    /* TESTING */
+    ScavTrap scavTrap("ScavTrap");
+    scavTrap.attack("target");
+    scavTrap.takeDamage(10);
+    scavTrap.beRepaired(10);
+    scavTrap.guardGate();
+
+    ClapTrap clapTrap("ClapTrap");
+    clapTrap.attack("target");
+    clapTrap.takeDamage(10);
+    clapTrap.beRepaired(10);
+    
+    
     return (0);
 }

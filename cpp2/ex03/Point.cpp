@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 05:50:43 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 01:57:16 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/07 16:52:51 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ Point& Point::operator=(const Point& p)
 
 Point::Point(const float x, const float y) : _x(x), _y(y) {}
 
-Fixed Point::getX() const
+float Point::getX() const
 {
-    return this->_x;
+    return this->_x.toFloat();
 }
 
-Fixed Point::getY() const
+float Point::getY() const
 {
-    return this->_y;
+    return this->_y.toFloat();
 }

@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:48:14 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/26 02:51:16 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:42:23 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,13 @@ void Contact::set_darkest_secret(Contact *contact)
     else
         this->darkest_secret = secret;
 }
+
+std::string Contact::get_first_name() {return (this->first_name);}
+
+std::string Contact::get_last_name() {return (this->last_name);}
+
+std::string Contact::get_nickname() {return (this->nickname);}
+
+std::string Contact::get_phone_number() {return (this->phone_number);}
+
+std::string Contact::get_darkest_secret() {return (this->darkest_secret);}

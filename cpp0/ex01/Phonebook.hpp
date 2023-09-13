@@ -6,12 +6,11 @@
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 15:04:35 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/26 02:52:44 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/12 16:19:53 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#pragma once
 
 #include <iomanip>
 #include <cstdlib>
@@ -33,4 +32,3 @@ class Phonebook
         std::string limited_str(std::string str);
 };
 
-#endif

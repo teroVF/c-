@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 15:04:35 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/13 21:57:05 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 23:51:54 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Phonebook
         Contact contact[8];
         int index;
     public:
-        void init_index() {index = 0;}
+        void init_index();
         void add_contact();
         void search_contact();
         void print_contact(int index);

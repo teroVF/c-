@@ -6,17 +6,16 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:51:03 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/14 00:38:46 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 23:36:58 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <string>
+
 class Contact
 {
-    
     public:
         typedef std::string str;
         void set_first_name(Contact *contact);

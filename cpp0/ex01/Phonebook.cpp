@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:50:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/14 00:01:47 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 23:52:13 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,9 @@ void Phonebook::search_contact()
             print_contact(index_int);
     }
     
+}
+
+void Phonebook::init_index()
+{
+    index = 0;
 }

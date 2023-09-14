@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 00:40:57 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/12 03:26:07 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 00:33:19 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int main(int argc, char const *argv[])
         {
             for (int j = 0; argv[i][j]; j++)
                 std::cout << (char) toupper(argv[i][j]);
-            std::cout << " ";
+            if (i < argc - 1)
+                std::cout << " ";
         }
         std::cout << std::endl;
     }

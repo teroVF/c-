@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/nfs/homes/anvieira/Desktop/Ccore/c++/cpp0/ex00",
-      "program": "/nfs/homes/anvieira/Desktop/Ccore/c++/cpp0/ex00/build/Debug/outDebug",
+      "cwd": "/nfs/homes/anvieira/Desktop/Ccore/mystery",
+      "program": "/nfs/homes/anvieira/Desktop/Ccore/mystery/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

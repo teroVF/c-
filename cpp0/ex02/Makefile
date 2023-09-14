@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -fr
 NAME = test
 SRCS = tests.cpp Account.cpp
@@ -30,4 +30,4 @@ re:
 	@$(MAKE) -s fclean
 	@$(MAKE) -s all
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean re

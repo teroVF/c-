@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 23:14:41 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/26 02:31:08 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 00:17:00 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

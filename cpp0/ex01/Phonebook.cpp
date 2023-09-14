@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:50:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/12 16:16:27 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/14 00:01:47 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ void    Phonebook::add_contact()
 
 void Phonebook::search_contact()
 {
+    if (index == 0)
+    {
+        std::cout << "No contacts to show" << std::endl;
+        return ;
+    } 
     std::cout << "     index|first name| last name|  nickname|" << std::endl;
     for (int i = 0; i < index; i++)
     {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:48:14 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/12 15:42:23 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:45:08 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void Contact::set_phone_number(Contact *contact)
 {
-    std::string number;
+    str number;
     std::cout << "Number: ";
     std::getline(std::cin, number);
     if (number.length() == 0)
@@ -28,7 +28,7 @@ void Contact::set_phone_number(Contact *contact)
 
 void Contact::set_first_name(Contact *contact)
 {
-    std::string first_name;
+    str first_name;
     std::cout << "First name: ";
     std::getline(std::cin, first_name);
     if (first_name.length() == 0)
@@ -42,7 +42,7 @@ void Contact::set_first_name(Contact *contact)
 
 void Contact::set_last_name(Contact *contact)
 {
-    std::string last_name;
+    str last_name;
     std::cout << "Last name: ";
     std::getline(std::cin, last_name);
     if (last_name.length() == 0)
@@ -56,7 +56,7 @@ void Contact::set_last_name(Contact *contact)
 
 void Contact::set_nickname(Contact *contact)
 {
-    std::string nickname;
+    str nickname;
     std::cout << "Nickname: ";
     std::getline(std::cin, nickname);
     if (nickname.length() == 0)
@@ -70,7 +70,7 @@ void Contact::set_nickname(Contact *contact)
 
 void Contact::set_darkest_secret(Contact *contact)
 {
-    std::string secret;
+    str secret;
     std::cout << "Tell me your darkest secret: ";
     std::getline(std::cin, secret);
     if (secret.length() == 0)
@@ -82,12 +82,27 @@ void Contact::set_darkest_secret(Contact *contact)
         this->darkest_secret = secret;
 }
 
-std::string Contact::get_first_name() {return (this->first_name);}
+Contact::str Contact::get_first_name() 
+{
+    return (this->first_name);
+}
 
-std::string Contact::get_last_name() {return (this->last_name);}
+Contact::str Contact::get_last_name() 
+{
+    return (this->last_name);
+}
 
-std::string Contact::get_nickname() {return (this->nickname);}
+Contact::str Contact::get_nickname() 
+{
+    return (this->nickname);
+}
 
-std::string Contact::get_phone_number() {return (this->phone_number);}
+Contact::str Contact::get_phone_number() 
+{
+    return (this->phone_number);
+}
 
-std::string Contact::get_darkest_secret() {return (this->darkest_secret);}
+Contact::str Contact::get_darkest_secret() 
+{
+    return (this->darkest_secret);
+}

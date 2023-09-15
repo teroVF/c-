@@ -1,6 +1,9 @@
 Minitalk
 file.bfe:VAAe8ElCrUAbXivz0ueiIpv/u/ia9PL50+HI+8/bgPKLESHlptPLpu0PW9zWV/LwDVaOqCRCGu6Gopk1X0i6Kn7t
 
+Pipex
+file.bfe:VACsSfsWN1cy33ROeASsmsgnY0o0sDMJev7zFHhwQS8mvM8V5xQQpLc6cDCFXDWTiFzZ2H9skYkiJ/DpQtnM/uZ0
+
 PUSH_SWAP
 file.bfe:VAA0DAYFf07ym3ROeASsmsgnY0o0sDMJev7zFHhwQS8mvM8V5xQQpLc6cDCFXDWTiFzZ2H9skYkiJ/DpQtnM/uZ0
 
@@ -13,4 +16,3 @@ file.bfe:VAD2sO2qgbqPEXROeASsmsgnY0o0sDMJev7zFHhwQS8mvM8V5xQQpLc6cDCFXDWTiFzZ2H9
 SO_LONG
 file.bfe:VABB7yO9xm7xWXROeASsmsgnY0o0sDMJev7zFHhwQS8mvM8V5xQQpLc6cDCFXDWTiFzZ2H9skYkiJ/DpQtnM/uZ0
 
-https://bcrypt-generator.com/

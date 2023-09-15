@@ -2,36 +2,36 @@
 #include <fstream>
 #include <string>
 
-std::string print_message(std::string string)
+
+
+std::string print_message(std::string input, int n)
 {
-    for (int i = 0; string[i] != '\0'; i++)
+    std::string result = input; // Crie uma cópia da string de entrada para evitar modificá-la diretamente.
+
+    for (int i = 0; i < result.length(); i++)
     {
-        if (string[i] >= 'a' && string[i] <= 'm')
+        if (result[i] >= 'a' && result[i] <= 'z')
         {
-            string[i] = string[i] + 13;
+            result[i] = 'a' + (result[i] - 'a' + n) % 26; // Use o módulo 26 para garantir que o resultado esteja dentro do alfabeto.
         }
-        else if (string[i] >= 'n' && string[i] <= 'z')
+        else if (result[i] >= 'A' && result[i] <= 'Z')
         {
-            string[i] = string[i] - 13;
-        }
-        else if (string[i] >= 'A' && string[i] <= 'M')
-        {
-            string[i] = string[i] + 13;
-        }
-        else if (string[i] >= 'N' && string[i] <= 'Z')
-        {
-            string[i] = string[i] - 13;
+            result[i] = 'A' + (result[i] - 'A' + n) % 26; // Use o módulo 26 para garantir que o resultado esteja dentro do alfabeto.
         }
     }
-    return string;
+
+    return result;
 }
+
 
 
 int main(int argc, char *argv[])
 {
-    if (argc > 1)
+    if (argc > 2)
     {
+        //argv[2] its a number
         //read first line of file ola.txt
+        int n = std::stoi(argv[2]);
         std::string line;
         std::ifstream myfile;
         myfile.open(argv[1]);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         {
             while (getline(myfile, line))
             {
-                    std::cout << print_message(line) << std::endl;
+                    std::cout << print_message(line, n) << std::endl;
             }
             myfile.close();
         }

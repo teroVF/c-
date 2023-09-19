@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 01:16:13 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/12 03:16:17 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/19 02:05:55 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ class FragTrap: public ClapTrap
         FragTrap(FragTrap const& scavTrap);
         ~FragTrap(void);
         FragTrap&	operator=(FragTrap const& scavTrap);
-        void       highFivesGuys(void);
+        void        highFivesGuys(void);
 };

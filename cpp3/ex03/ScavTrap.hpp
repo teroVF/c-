@@ -6,14 +6,14 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 01:16:13 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/19 02:19:19 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/19 02:50:09 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
 # include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap
+class ScavTrap: public virtual ClapTrap
 {
     public:
         ScavTrap(void);

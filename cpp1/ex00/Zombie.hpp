@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 03:34:54 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/26 16:21:21 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/19 03:13:06 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
     Zombie( std::string name );
     ~Zombie( void );
-    void announce(void);
+    void announce( void );
 };
 
 Zombie* newZombie( std::string name );

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 01:54:06 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 06:13:09 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:50:08 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 static bool is_on_edge(Point p1, Point p2, Point point)
 {
+    if (p1.getX() == p2.getX())
+    {
+        if (p1.getY() == point.getY())
+            return true;
+        if (p2.getY() == point.getY())
+            return true;
+        if (Fixed::min(p1.getY(), p2.getY()) < point.getY() 
+            && Fixed::max(p1.getY(), p2.getY()) > point.getY())
+            return true;
+    }
     float m = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
     float b = p1.getY() - m * p1.getX();
     float y = m * point.getX() + b;

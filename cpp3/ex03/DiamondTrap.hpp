@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 02:48:40 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/19 03:10:31 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/19 22:37:42 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ public:
     DiamondTrap(std::string name);
     
     ~DiamondTrap();
-    DiamondTrap(const ClapTrap& obj);
-    DiamondTrap& operator=(const ClapTrap& obj);
+    DiamondTrap(const DiamondTrap& obj);
+    DiamondTrap& operator=(const DiamondTrap& obj);
 
     void whoAmI(void);
     

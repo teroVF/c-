@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 01:46:26 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:51:55 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,13 @@ public:
     Fixed   operator-(const Fixed& f) const;
     Fixed   operator*(const Fixed& f) const;
     Fixed   operator/(const Fixed& f) const;
+    // < > <= >= == !=
+    bool    operator>(const Fixed& f) const;
+    bool    operator<(const Fixed& f) const;
+    bool    operator>=(const Fixed& f) const;
+    bool    operator<=(const Fixed& f) const;
+    bool    operator==(const Fixed& f) const;
+    bool    operator!=(const Fixed& f) const;
     Fixed&  operator++(void);
     Fixed   operator++(int);
     Fixed&  operator--(void);

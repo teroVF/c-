@@ -1,0 +1,5 @@
+{
+    ola
+    Memcheck:Leak
+    fun:malloc
+}

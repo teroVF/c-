@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 21:16:17 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/29 21:54:53 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/26 01:56:02 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#pragma once
 # include <string>
 # include <iostream>
 
@@ -34,5 +33,3 @@ public:
     Harl();
     ~Harl();
 };
-
-#endif /* HARL_HPP */

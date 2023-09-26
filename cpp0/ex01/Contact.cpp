@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:48:14 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/14 23:50:20 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/25 16:51:07 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void Contact::set_phone_number(Contact *contact)
         this->phone_number = number;
 }
 
-void Contact::set_first_name(Contact *contact)
+void Contact::set_first_name()
 {
     str first_name;
     std::cout << "First name: ";
@@ -34,7 +34,7 @@ void Contact::set_first_name(Contact *contact)
     if (first_name.length() == 0)
     {
         std::cout << "empty argument" << std::endl;
-        set_first_name(contact);
+        set_first_name();
     }
     else
         this->first_name = first_name;

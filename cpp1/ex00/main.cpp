@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 03:35:43 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/19 03:35:36 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/26 02:39:48 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,25 @@
 
 int main(void)
 {
+    // dinamic allocation
+    std::cout << "Dinamic allocation" << std::endl;
     Zombie *zombie;
-    Zombie zombie3("Michael Anthony");
-    Zombie *zombie4 = new Zombie("Eddie Van Halen");
-    
-    zombie4->announce();
     zombie = newZombie("Jesse James");
     zombie->announce();
-    zombie->announce();
-    randomChump("Zombie 2");
+    Zombie *zombie2 = new Zombie("Eddie Van Halen");
+    zombie2->announce();
+    
+    // static allocation
+    std::cout << "Static allocation" << std::endl;
+    Zombie zombie3("Michael Anthony");
     zombie3.announce();
+    
+    // call function with static allocation
+    std::cout << "Call function with static allocation" << std::endl;
+    randomChump("Ricky Martin");
+
+    //free dinamic allocation
     delete zombie;
-    delete zombie4;
+    delete zombie2;
     return (0);
 }

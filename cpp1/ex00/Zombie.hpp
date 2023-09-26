@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 03:34:54 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/19 03:13:06 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/26 02:38:34 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-
+#pragma once
 #include <string>
 #include <iostream>
 
@@ -28,6 +26,3 @@ public:
 
 Zombie* newZombie( std::string name );
 void    randomChump( std::string name );
-
-
-#endif /* ZOMBIE_HPP */

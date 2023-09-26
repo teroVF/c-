@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 02:50:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/14 23:52:13 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/25 16:52:37 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ void    Phonebook::add_contact()
 {
     Contact contact_temp;
     
-    contact_temp.set_first_name(&contact_temp);
-    contact_temp.set_last_name(&contact_temp);
-    contact_temp.set_nickname(&contact_temp);
-    contact_temp.set_phone_number(&contact_temp);
-    contact_temp.set_darkest_secret(&contact_temp);
+    contact_temp.set_first_name();
+    contact_temp.set_last_name();
+    contact_temp.set_nickname();
+    contact_temp.set_phone_number();
+    contact_temp.set_darkest_secret();
     if (index == 8)
     {
         Contact new_contact[8];

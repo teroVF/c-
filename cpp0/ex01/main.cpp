@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 02:26:55 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/13 21:46:16 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/25 17:06:28 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void)
     phonebook.init_index();
     while(command != "EXIT")
     {
-        std::cout << "Enter a command: ";
+        cout << "Enter a command: ";
         std::getline(std::cin, command);
         if (command == "ADD")
             phonebook.add_contact();

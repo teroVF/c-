@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 00:37:58 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/28 01:34:00 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/26 01:53:42 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ Weapon::Weapon(std::string type)
     this->type = type;
 }
 
-Weapon::~Weapon(void)
-{
-}
+Weapon::~Weapon(void) {}
 
 std::string const &Weapon::getType(void)
 {

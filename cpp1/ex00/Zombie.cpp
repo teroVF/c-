@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 03:34:47 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/19 03:19:27 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/09/26 00:00:12 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ Zombie::Zombie( std::string name )
 
 Zombie::~Zombie( void )
 {
-    
     std::cout << this->name << " passed away" << std::endl;
 }

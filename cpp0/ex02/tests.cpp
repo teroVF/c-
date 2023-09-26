@@ -11,6 +11,8 @@
 #include <algorithm>
 #include <functional>
 #include "Account.hpp"
+#include <stdio.h>
+#include <iostream>
 
 
 int		main( void ) {
@@ -42,8 +44,8 @@ int		main( void ) {
 
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;
-		  ++(it.first), ++(it.second) ) {
-
+		  (it.first)++, (it.second)++ ) {
+		std::cout << "it.second: " << *(it.second) << std::endl;
 		(*(it.first)).makeDeposit( *(it.second) );
 	}
 

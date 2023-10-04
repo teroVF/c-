@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/06 01:46:39 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/04 02:40:49 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,18 @@ public:
     Fixed operator++(int);
     Fixed& operator--(void);
     Fixed operator--(int);
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
-    float toFloat( void ) const;
-    int toInt( void ) const;
+    bool operator>(const Fixed& f) const;
+    bool operator<(const Fixed& f) const;
+    bool operator>=(const Fixed& f) const;
+    bool operator<=(const Fixed& f) const;
     static Fixed& min(Fixed& f1, Fixed& f2);
     static const Fixed& min(const Fixed& f1, const Fixed& f2);
     static Fixed& max(Fixed& f1, Fixed& f2);
     static const Fixed& max(const Fixed& f1, const Fixed& f2);
+    int     getRawBits( void ) const;
+    void    setRawBits( int const raw );
+    float   toFloat( void ) const;
+    int     toInt( void ) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f);

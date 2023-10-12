@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/08/31 01:34:41 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:59:30 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed::_bits = 8;
 
 Fixed::Fixed()
 {
@@ -25,6 +27,8 @@ Fixed::~Fixed()
 
 Fixed::Fixed(const Fixed &f)
 {
+    if (this == &f)
+        return ;
     std::cout << "Copy Constructor was called" << std::endl;
     *this = f;
 }
@@ -44,6 +48,6 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout << "setRawBits member function called" << std::endl;
     this->_value = raw;
+    std::cout << "setRawBits member function called" << std::endl;
 }

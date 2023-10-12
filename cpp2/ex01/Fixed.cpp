@@ -3,24 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/04 23:48:38 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/11 21:16:12 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
+const int Fixed::_bits = 8;
+
 Fixed::Fixed(int const number)
 {
-    this->_value = number << this->_bits;
+    this->_value = number * (1 << this->_bits);
     std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(float const number)
 {
-    this->_value = (int)roundf(number * (1 << this->_bits));
+    this->_value = (int)roundf(number * float(1 << this->_bits));
     std::cout << "Float constructor called" << std::endl;
 }
 

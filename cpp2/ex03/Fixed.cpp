@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:52 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 01:46:39 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/11 23:59:39 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,27 @@ Fixed &Fixed::min(Fixed &f1, Fixed &f2)
     return f2;
 }
 
+bool Fixed::operator>(const Fixed &f) const
+{
+    return (this->_value > f.getRawBits());
+}
+
+bool Fixed::operator<(const Fixed &f) const
+{
+    return (this->_value < f.getRawBits());
+}
+
+bool Fixed::operator>=(const Fixed &f) const
+{
+    return (this->_value >= f.getRawBits());
+}
+
+bool Fixed::operator<=(const Fixed &f) const
+{
+    return (this->_value <= f.getRawBits());
+}
+
+
 const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2)
 {
     if (f1.getRawBits() < f2.getRawBits())
@@ -139,3 +160,4 @@ const Fixed &Fixed::max(const Fixed &f1, const Fixed &f2)
         return f1;
     return f2;
 }
+

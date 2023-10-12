@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
+/*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 02:31:54 by anvieira          #+#    #+#             */
-/*   Updated: 2023/09/07 16:53:32 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/12 00:09:53 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 class Point
 {
 private:
-    Fixed const _x;
-    Fixed const _y;
+    Fixed const _x; /**< The x-coordinate of the point. */
+    Fixed const _y; /**< The y-coordinate of the point. */
 public:
     Point();
     ~Point();

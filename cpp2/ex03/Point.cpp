@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 05:50:43 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/12 00:26:27 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 00:10:20 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,10 @@ Point::Point(const float x, const float y) : _x(x), _y(y) {
     //std::cout << "Point created" << std::endl;
 }
 
-float Point::getX() const
-{
-    return this->_x.toFloat();
+Fixed const &Point::getYFixed() const {
+    return this->_y;
 }
 
-float Point::getY() const
-{
-    return this->_y.toFloat();
+Fixed const &Point::getXFixed() const {
+    return this->_x;
 }

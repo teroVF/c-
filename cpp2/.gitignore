@@ -1,0 +1,10 @@
+.vscode
+*/vscode
+*/.vscode
+*/.vscode/*
+output
+*/output
+*/.output
+*/.output/*
+
+*/*.o 

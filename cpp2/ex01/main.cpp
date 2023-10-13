@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 01:39:00 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/11 21:04:07 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/12 23:24:49 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,28 @@ int main( void )
 
 // int main ()
 // {
-//     float const f = 42.42f;
+//     Fixed a (5.0f);
+
+//     std::cout << "binary: " << std::bitset<32>(a.getRawBits()) << std::endl;
+//     std::cout << "float: " << a.toFloat() << std::endl;
+    
+
+//     float const f = 5.0f;
 //     std::cout << "binary float: " << std::bitset<32>(*(int *)&f) << std::endl;
 //     std::cout << "float: " << f << std::endl;
-//     int i = int( f * float(1 << 8));
+//     int i = int(f * float(1 << 8));
 //     std::cout << "binary int: " << std::bitset<32>(i) << std::endl;
 //     std::cout << "int: " << i << std::endl;
-//     float div = i/float(1 << 8);
-//     std::cout << "bin div: " << std::bitset<32>(*(int *)&div) << std::endl;
-//     std::cout << "div: " << div << std::endl;
     
+//     i = i / (1 << 8);
+//     std::cout << "binary int: " << std::bitset<32>(i) << std::endl;
+//     std::cout << "int: " << i << std::endl;
+    
+
+//     int m = 5;
+    
+//     std::cout << "int: " << m << std::endl;
+//     std::cout << "binary int: " << std::bitset<32>(m) << std::endl;    
 //     // Fixed a;
 //     // a = f;
 //     // std::cout << "binary: " << std::bitset<32>(a.getRawBits()) << std::endl;

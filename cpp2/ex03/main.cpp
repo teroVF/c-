@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 02:22:09 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/13 02:07:12 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 02:29:50 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main()
 {
-    // Point a(0, 0);
-    // Point b(0, 4);
-    // Point c(4, 0);
+    Point a(0, 0);
+    Point b(0, 4);
+    Point c(4, 0);
 
     // Point a(2, 1);
     // Point b(2, 3);
@@ -26,9 +26,9 @@ int main()
     // Point b(2, 3);
     // Point c(3, 2);
     
-    // Point a(0, 9);
-    // Point b(0, 6);
-    // Point c(0, 3);
+    // Point a(2, 4);
+    // Point b(1, 4);
+    // Point c(0, 4);
     
     // Point a(4, 9);
     // Point b(4, 2);
@@ -38,9 +38,9 @@ int main()
     // Point b(4, 4);
     // Point c(4, 4);
 
-    Point a(4, 3);
-    Point b(0, 0);
-    Point c(-4, 3);
+    // Point a(4, 3);
+    // Point b(0, 0);
+    // Point c(-4, 3);
     
     Point point1(2, 2);
     Point point2(1, 1);
@@ -62,10 +62,6 @@ int main()
     Point point18(2.01, 2.01);
     Point point19(1.9999f, 1.9999f);
 
-    std::cout << "POINT 19 X: " << point19.getXFixed() << std::endl;
-    std::cout << "POINT 19 Y: " << point19.getYFixed() << std::endl;
-
-    //
     std::cout<< "POINT 1: " << std::endl;
     std::cout << bsp(a, b, c, point1) << std::endl;
     std::cout<< "POINT 2: " << std::endl;

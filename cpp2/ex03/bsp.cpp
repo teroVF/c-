@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 01:54:06 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/13 01:34:20 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 02:20:24 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
     //point
     Fixed point_x = point.getXFixed();
     Fixed point_y = point.getYFixed();
+    
+    if (a_x == b_x && a_x == c_x)
+        return false;
 
     if (is_on_edge(a, b, point ) || is_on_edge(a, c, point) 
         || is_on_edge(b, c, point))

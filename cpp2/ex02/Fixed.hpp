@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 02:45:48 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/13 15:10:23 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:11:22 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ public:
     bool    operator<(const Fixed& f) const;
     bool    operator>=(const Fixed& f) const;
     bool    operator<=(const Fixed& f) const;
+    bool    operator==(const Fixed& f) const;
     static Fixed& min(Fixed& f1, Fixed& f2);
     static const Fixed& min(const Fixed& f1, const Fixed& f2);
     static Fixed& max(Fixed& f1, Fixed& f2);

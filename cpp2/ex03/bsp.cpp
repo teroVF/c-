@@ -6,7 +6,7 @@
 /*   By: anvieira <anvieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 01:54:06 by anvieira          #+#    #+#             */
-/*   Updated: 2023/10/13 02:20:24 by anvieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 02:33:15 by anvieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 static Fixed fixed_abs(Fixed const &f)
 {
-    if (f < 0)
-        return f * Fixed(-1);
-    return f;
+    return (f < 0 ? f * (-1) : f);
 }
 
 static bool is_on_edge(Point p1, Point p2, Point point)

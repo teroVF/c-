@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -fr
 NAME = bsq
 SRCS = main.cpp Fixed.cpp bsp.cpp Point.cpp
